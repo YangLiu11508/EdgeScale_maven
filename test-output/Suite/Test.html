@@ -1,0 +1,551 @@
+<html>
+<head>
+<title>TestNG:  Test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>32/4/0</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Sep 04 15:20:33 CST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>621 seconds (621381 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.CreateSolution.testCreateSolution()'><b>testCreateSolution</b><br>Test class: com.nxp.EdgeScale.testcase.CreateSolution</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;app&quot;]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div[2]/form/div[2]/div/button[3]/span&quot;}
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;NXL75620&apos;, ip: &apos;192.168.0.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\nxf46859\AppData\Local\Temp\1\scoped_dir5552_17098}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ff25db1d7cb78d96145b58f9621e15de
+*** Element info: {Using=xpath, value=//*[@id=&quot;app&quot;]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div[2]/form/div[2]/div/button[3]/span}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at com.nxp.EdgeScale.base.DriverBase.findElement(DriverBase.java:42)
+	at com.nxp.EdgeScale.base.BasePage.element(BasePage.java:23)
+	at com.nxp.EdgeScale.page.CreateSolutionPage.getNext2Button(CreateSolutionPage.java:48)
+	at com.nxp.EdgeScale.handle.CreateSolutionPageHandle.clickNext2Button(CreateSolutionPageHandle.java:42)
+	at com.nxp.EdgeScale.business.CreateSolutionPagePro.createSolution(CreateSolutionPagePro.java:54)
+	at com.nxp.EdgeScale.testcase.CreateSolution.testCreateSolution(CreateSolution.java:48)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2100440237", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2100440237'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;app&quot;]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div[2]/form/div[2]/div/button[3]/span&quot;}
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.08 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;NXL75620&apos;, ip: &apos;192.168.0.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\nxf46859\AppData\Local\Temp\1\scoped_dir5552_17098}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: ff25db1d7cb78d96145b58f9621e15de
+*** Element info: {Using=xpath, value=//*[@id=&quot;app&quot;]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div[2]/form/div[2]/div/button[3]/span}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at com.nxp.EdgeScale.base.DriverBase.findElement(DriverBase.java:42)
+	at com.nxp.EdgeScale.base.BasePage.element(BasePage.java:23)
+	at com.nxp.EdgeScale.page.CreateSolutionPage.getNext2Button(CreateSolutionPage.java:48)
+	at com.nxp.EdgeScale.handle.CreateSolutionPageHandle.clickNext2Button(CreateSolutionPageHandle.java:42)
+	at com.nxp.EdgeScale.business.CreateSolutionPagePro.createSolution(CreateSolutionPagePro.java:54)
+	at com.nxp.EdgeScale.testcase.CreateSolution.testCreateSolution(CreateSolution.java:48)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>20</td>
+<td>com.nxp.EdgeScale.testcase.CreateSolution@2b2948e2</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Solution.testDeleteTag()'><b>testDeleteTag</b><br>Test class: com.nxp.EdgeScale.testcase.Solution</td>
+<td><div><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;app&quot;]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div/div[2]/div/div[2]/div/div[1]/div/div[1]/div/div[3]/div/div[2]/span/span[1]/span/i&quot;}
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;NXL75620&apos;, ip: &apos;192.168.0.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\nxf46859\AppData\Local\Temp\1\scoped_dir13996_25676}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 58404d144df0a90e3e60c8125e0238fd
+*** Element info: {Using=xpath, value=//*[@id=&quot;app&quot;]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div/div[2]/div/div[2]/div/div[1]/div/div[1]/div/div[3]/div/div[2]/span/span[1]/span/i}
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at com.nxp.EdgeScale.base.DriverBase.findElement(DriverBase.java:42)
+	at com.nxp.EdgeScale.base.BasePage.element(BasePage.java:23)
+	at com.nxp.EdgeScale.page.SolutionPage.getDeleteTagButton(SolutionPage.java:42)
+	at com.nxp.EdgeScale.handle.SolutionPageHandle.clickDeleteTagButton(SolutionPageHandle.java:41)
+	at com.nxp.EdgeScale.business.SolutionPagePro.deleteTag(SolutionPagePro.java:40)
+	at com.nxp.EdgeScale.testcase.Solution.testDeleteTag(Solution.java:60)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace997033037", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace997033037'><pre>org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;app&quot;]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div/div[2]/div/div[2]/div/div[1]/div/div[1]/div/div[3]/div/div[2]/span/span[1]/span/i&quot;}
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 10.07 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;NXL75620&apos;, ip: &apos;192.168.0.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\nxf46859\AppData\Local\Temp\1\scoped_dir13996_25676}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: 58404d144df0a90e3e60c8125e0238fd
+*** Element info: {Using=xpath, value=//*[@id=&quot;app&quot;]/div/div[2]/div/div[2]/div[2]/div[1]/div/div/div/div[2]/div/div[2]/div/div[1]/div/div[1]/div/div[3]/div/div[2]/span/span[1]/span/i}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:473)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:360)
+	at com.nxp.EdgeScale.base.DriverBase.findElement(DriverBase.java:42)
+	at com.nxp.EdgeScale.base.BasePage.element(BasePage.java:23)
+	at com.nxp.EdgeScale.page.SolutionPage.getDeleteTagButton(SolutionPage.java:42)
+	at com.nxp.EdgeScale.handle.SolutionPageHandle.clickDeleteTagButton(SolutionPageHandle.java:41)
+	at com.nxp.EdgeScale.business.SolutionPagePro.deleteTag(SolutionPagePro.java:40)
+	at com.nxp.EdgeScale.testcase.Solution.testDeleteTag(Solution.java:60)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>10</td>
+<td>com.nxp.EdgeScale.testcase.Solution@6ddf90b0</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Device.testDeleteTagFromDevice()'><b>testDeleteTagFromDevice</b><br>Test class: com.nxp.EdgeScale.testcase.Device</td>
+<td><div><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 47 milliseconds
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;NXL75620&apos;, ip: &apos;192.168.0.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\nxf46859\AppData\Local\Temp\1\scoped_dir14196_10500}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: dbeaed3b9536668671199279f450ecb7
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.nxp.EdgeScale.base.BasePage.click(BasePage.java:62)
+	at com.nxp.EdgeScale.handle.DevicePageHandle.clickDeviceDeleteTagButton(DevicePageHandle.java:117)
+	at com.nxp.EdgeScale.business.DevicePagePro.deleteTag(DevicePagePro.java:130)
+	at com.nxp.EdgeScale.testcase.Device.testDeleteTagFromDevice(Device.java:66)
+... Removed 29 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace2059572982", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace2059572982'><pre>org.openqa.selenium.ElementNotVisibleException: element not visible
+  (Session info: chrome=68.0.3440.106)
+  (Driver info: chromedriver=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab),platform=Windows NT 10.0.15063 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 47 milliseconds
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;NXL75620&apos;, ip: &apos;192.168.0.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.40.565498 (ea082db3280dd6843ebfb08a625e3eb905c4f5ab), userDataDir=C:\Users\nxf46859\AppData\Local\Temp\1\scoped_dir14196_10500}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=68.0.3440.106, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=false, acceptInsecureCerts=false, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
+Session ID: dbeaed3b9536668671199279f450ecb7
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at com.nxp.EdgeScale.base.BasePage.click(BasePage.java:62)
+	at com.nxp.EdgeScale.handle.DevicePageHandle.clickDeviceDeleteTagButton(DevicePageHandle.java:117)
+	at com.nxp.EdgeScale.business.DevicePagePro.deleteTag(DevicePagePro.java:130)
+	at com.nxp.EdgeScale.testcase.Device.testDeleteTagFromDevice(Device.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.nxp.EdgeScale.testcase.Device@335eadca</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Device.testInactiveDevice()'><b>testInactiveDevice</b><br>Test class: com.nxp.EdgeScale.testcase.Device</td>
+<td><div><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.className: el-message__content (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at com.nxp.EdgeScale.business.DevicePagePro.vertifyTopNotice(DevicePagePro.java:84)
+	at com.nxp.EdgeScale.testcase.Device.testInactiveDevice(Device.java:82)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.className: el-message__content
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;NXL75620&apos;, ip: &apos;192.168.0.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 27 more
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1267105885", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1267105885'><pre>org.openqa.selenium.TimeoutException: Expected condition failed: waiting for presence of element located by: By.className: el-message__content (tried for 20 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at com.nxp.EdgeScale.business.DevicePagePro.vertifyTopNotice(DevicePagePro.java:84)
+	at com.nxp.EdgeScale.testcase.Device.testInactiveDevice(Device.java:82)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:661)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:869)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1193)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:126)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:744)
+	at org.testng.TestRunner.run(TestRunner.java:602)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:380)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:375)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1301)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1226)
+	at org.testng.TestNG.runSuites(TestNG.java:1144)
+	at org.testng.TestNG.run(TestNG.java:1115)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.className: el-message__content
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;NXL75620&apos;, ip: &apos;192.168.0.150&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Optional.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:181)
+	at org.openqa.selenium.support.ui.ExpectedConditions$6.apply(ExpectedConditions.java:178)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 27 more
+</pre></div></td>
+<td>27</td>
+<td>com.nxp.EdgeScale.testcase.Device@335eadca</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Device.testActiveDevice()'><b>testActiveDevice</b><br>Test class: com.nxp.EdgeScale.testcase.Device</td>
+<td></td>
+<td>7</td>
+<td>com.nxp.EdgeScale.testcase.Device@335eadca</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Solution.testAddTag()'><b>testAddTag</b><br>Test class: com.nxp.EdgeScale.testcase.Solution</td>
+<td></td>
+<td>1</td>
+<td>com.nxp.EdgeScale.testcase.Solution@6ddf90b0</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Device.testAddTagToDevice()'><b>testAddTagToDevice</b><br>Test class: com.nxp.EdgeScale.testcase.Device</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Device@335eadca</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.App.testAppAddDocker()'><b>testAppAddDocker</b><br>Test class: com.nxp.EdgeScale.testcase.App</td>
+<td></td>
+<td>21</td>
+<td>com.nxp.EdgeScale.testcase.App@eec5a4a</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.App.testAppMutipleDeploy()'><b>testAppMutipleDeploy</b><br>Test class: com.nxp.EdgeScale.testcase.App</td>
+<td></td>
+<td>22</td>
+<td>com.nxp.EdgeScale.testcase.App@eec5a4a</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Device.testBindTag()'><b>testBindTag</b><br>Test class: com.nxp.EdgeScale.testcase.Device</td>
+<td></td>
+<td>8</td>
+<td>com.nxp.EdgeScale.testcase.Device@335eadca</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.App.testChangeAppPermission()'><b>testChangeAppPermission</b><br>Test class: com.nxp.EdgeScale.testcase.App</td>
+<td></td>
+<td>16</td>
+<td>com.nxp.EdgeScale.testcase.App@eec5a4a</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.CreateDevice.testCreateDevice()'><b>testCreateDevice</b><br>Test class: com.nxp.EdgeScale.testcase.CreateDevice</td>
+<td></td>
+<td>10</td>
+<td>com.nxp.EdgeScale.testcase.CreateDevice@67784306</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.CreateApp.testCreateDevice()'><b>testCreateDevice</b><br>Test class: com.nxp.EdgeScale.testcase.CreateApp</td>
+<td></td>
+<td>20</td>
+<td>com.nxp.EdgeScale.testcase.CreateApp@210366b4</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.CreateModel.testCreateModel()'><b>testCreateModel</b><br>Test class: com.nxp.EdgeScale.testcase.CreateModel</td>
+<td></td>
+<td>14</td>
+<td>com.nxp.EdgeScale.testcase.CreateModel@57536d79</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Vendor.testCreateVendor()'><b>testCreateVendor</b><br>Test class: com.nxp.EdgeScale.testcase.Vendor</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Vendor@5a8e6209</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.App.testDeleteApp()'><b>testDeleteApp</b><br>Test class: com.nxp.EdgeScale.testcase.App</td>
+<td></td>
+<td>6</td>
+<td>com.nxp.EdgeScale.testcase.App@eec5a4a</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Device.testDeleteDevice()'><b>testDeleteDevice</b><br>Test class: com.nxp.EdgeScale.testcase.Device</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Device@335eadca</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Model.testDeleteModel()'><b>testDeleteModel</b><br>Test class: com.nxp.EdgeScale.testcase.Model</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Model@3b0143d3</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Solution.testDeleteSolution()'><b>testDeleteSolution</b><br>Test class: com.nxp.EdgeScale.testcase.Solution</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Solution@6ddf90b0</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Vendor.testDeleteVendor()'><b>testDeleteVendor</b><br>Test class: com.nxp.EdgeScale.testcase.Vendor</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Vendor@5a8e6209</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.App.testDeployApp()'><b>testDeployApp</b><br>Test class: com.nxp.EdgeScale.testcase.App</td>
+<td></td>
+<td>11</td>
+<td>com.nxp.EdgeScale.testcase.App@eec5a4a</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.App.testDeployPublicApp()'><b>testDeployPublicApp</b><br>Test class: com.nxp.EdgeScale.testcase.App</td>
+<td></td>
+<td>6</td>
+<td>com.nxp.EdgeScale.testcase.App@eec5a4a</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Solution.testDeploySolution()'><b>testDeploySolution</b><br>Test class: com.nxp.EdgeScale.testcase.Solution</td>
+<td></td>
+<td>17</td>
+<td>com.nxp.EdgeScale.testcase.Solution@6ddf90b0</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Solution.testDownImage()'><b>testDownImage</b><br>Test class: com.nxp.EdgeScale.testcase.Solution</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Solution@6ddf90b0</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.App.testEditAppInfo()'><b>testEditAppInfo</b><br>Test class: com.nxp.EdgeScale.testcase.App</td>
+<td></td>
+<td>17</td>
+<td>com.nxp.EdgeScale.testcase.App@eec5a4a</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Model.testEditModel()'><b>testEditModel</b><br>Test class: com.nxp.EdgeScale.testcase.Model</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Model@3b0143d3</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Solution.testEditSolution()'><b>testEditSolution</b><br>Test class: com.nxp.EdgeScale.testcase.Solution</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Solution@6ddf90b0</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Vendor.testEditVendor()'><b>testEditVendor</b><br>Test class: com.nxp.EdgeScale.testcase.Vendor</td>
+<td></td>
+<td>4</td>
+<td>com.nxp.EdgeScale.testcase.Vendor@5a8e6209</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Model.testFindModelsByModel()'><b>testFindModelsByModel</b><br>Test class: com.nxp.EdgeScale.testcase.Model</td>
+<td></td>
+<td>3</td>
+<td>com.nxp.EdgeScale.testcase.Model@3b0143d3</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Model.testFindModelsByPlatform()'><b>testFindModelsByPlatform</b><br>Test class: com.nxp.EdgeScale.testcase.Model</td>
+<td></td>
+<td>3</td>
+<td>com.nxp.EdgeScale.testcase.Model@3b0143d3</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Model.testFindModelsByType()'><b>testFindModelsByType</b><br>Test class: com.nxp.EdgeScale.testcase.Model</td>
+<td></td>
+<td>3</td>
+<td>com.nxp.EdgeScale.testcase.Model@3b0143d3</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Model.testFindModelsByVendor()'><b>testFindModelsByVendor</b><br>Test class: com.nxp.EdgeScale.testcase.Model</td>
+<td></td>
+<td>3</td>
+<td>com.nxp.EdgeScale.testcase.Model@3b0143d3</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Login.testLogin()'><b>testLogin</b><br>Test class: com.nxp.EdgeScale.testcase.Login</td>
+<td></td>
+<td>17</td>
+<td>com.nxp.EdgeScale.testcase.Login@6f1fba17</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Login.testLoginFail()'><b>testLoginFail</b><br>Test class: com.nxp.EdgeScale.testcase.Login</td>
+<td></td>
+<td>2</td>
+<td>com.nxp.EdgeScale.testcase.Login@6f1fba17</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.Register.testRegisterWithExistEmail()'><b>testRegisterWithExistEmail</b><br>Test class: com.nxp.EdgeScale.testcase.Register</td>
+<td></td>
+<td>6</td>
+<td>com.nxp.EdgeScale.testcase.Register@185d8b6</td></tr>
+<tr>
+<td title='com.nxp.EdgeScale.testcase.App.testUpdateAppDocument()'><b>testUpdateAppDocument</b><br>Test class: com.nxp.EdgeScale.testcase.App</td>
+<td></td>
+<td>7</td>
+<td>com.nxp.EdgeScale.testcase.App@eec5a4a</td></tr>
+</table><p>
+</body>
+</html>
