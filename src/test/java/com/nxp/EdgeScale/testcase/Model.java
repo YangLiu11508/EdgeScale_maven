@@ -47,7 +47,7 @@ public class Model extends CaseBase {
 		}
 	}
 	
-	@Test(priority = 0)
+//	@Test(priority = 0)
 	public void testEditModel() {
 		logger.info("编辑model开始");
 		ProUtil proUtil = new ProUtil(Common.PARAMETER);
@@ -57,7 +57,7 @@ public class Model extends CaseBase {
 		logger.info("编辑model成功");
 	}
 
-	@Test(priority = 1)
+//	@Test(priority = 1)
 	public void testDeleteModel() {
 		logger.info("删除model开始");
 		modelPagePro.deleteModel();

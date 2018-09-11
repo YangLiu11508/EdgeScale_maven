@@ -45,7 +45,7 @@ public class Solution extends CaseBase {
 		}
 	}
 
-	@Test
+//	@Test
 	public void testAddTag() {
 		logger.info("添加tag开始");
 		solutionPagePro.addNewTag(new ProUtil(Common.PARAMETER).getPro("solution_add_tag"));
@@ -54,7 +54,7 @@ public class Solution extends CaseBase {
 		logger.info("添加tag成功");
 	}
 
-	@Test
+//	@Test
 	public void testDeleteTag() {
 		logger.info("删除tag开始");
 		solutionPagePro.deleteTag();
@@ -63,7 +63,7 @@ public class Solution extends CaseBase {
 		logger.info("删除tag成功");
 	}
 
-	@Test
+//	@Test
 	public void testDeleteSolution() {
 		logger.info("删除solution开始");
 		solutionPagePro.deleteSolution();
@@ -81,14 +81,14 @@ public class Solution extends CaseBase {
 		logger.info("部署solution成功");
 	}
 
-	@Test
+//	@Test
 	public void testDownImage() {
 		logger.info("下载image开始");
 		solutionPagePro.downImage();
 		logger.info("下载image成功");
 	}
 
-	@Test
+//	@Test
 	public void testEditSolution() {
 		logger.info("编辑solution开始");
 		solutionPagePro.editSolution();

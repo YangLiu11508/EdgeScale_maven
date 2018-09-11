@@ -30,8 +30,8 @@ public class CreateSolutionPageHandle {
 		csp.sendkeys(csp.getVersionInput(), version);
 	}
 	
-	public void clickVersionInputList() {
-		csp.click(csp.getVersionInputList());
+	public void clickVersionInputList(String version) {
+		csp.click(csp.getVersionInputList(version));
 	}
 	
 	public void clickNextButton() {

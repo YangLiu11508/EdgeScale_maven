@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="26681" started-at="2018-09-04T10:01:42Z" finished-at="2018-09-04T10:02:08Z">
+  <suite name="Default suite" duration-ms="33860" started-at="2018-09-11T08:49:16Z" finished-at="2018-09-11T08:49:50Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="26681" started-at="2018-09-04T10:01:42Z" finished-at="2018-09-04T10:02:08Z">
-      <class name="com.nxp.EdgeScale.testcase.Login">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.nxp.EdgeScale.testcase.Login@4e9ba398]" name="init" is-config="true" duration-ms="4279" started-at="2018-09-04T18:01:42Z" finished-at="2018-09-04T18:01:46Z">
+    <test name="Default test" duration-ms="33860" started-at="2018-09-11T08:49:16Z" finished-at="2018-09-11T08:49:50Z">
+      <class name="com.nxp.EdgeScale.testcase.Solution">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.nxp.EdgeScale.testcase.Solution@5abca1e0]" name="init" is-config="true" duration-ms="9105" started-at="2018-09-11T16:49:16Z" finished-at="2018-09-11T16:49:25Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testLogin()[pri:0, instance:com.nxp.EdgeScale.testcase.Login@4e9ba398]" name="testLogin" duration-ms="17398" started-at="2018-09-04T18:01:46Z" finished-at="2018-09-04T18:02:03Z">
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.nxp.EdgeScale.testcase.Solution@5abca1e0]" name="afterMethod" is-config="true" duration-ms="7023" started-at="2018-09-11T16:49:25Z" finished-at="2018-09-11T16:49:32Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLogin -->
-        <test-method status="PASS" signature="testLoginFail()[pri:0, instance:com.nxp.EdgeScale.testcase.Login@4e9ba398]" name="testLoginFail" duration-ms="4442" started-at="2018-09-04T18:02:03Z" finished-at="2018-09-04T18:02:08Z">
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="testDeploySolution()[pri:0, instance:com.nxp.EdgeScale.testcase.Solution@5abca1e0]" name="testDeploySolution" duration-ms="17541" started-at="2018-09-11T16:49:32Z" finished-at="2018-09-11T16:49:50Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testLoginFail -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.nxp.EdgeScale.testcase.Login@4e9ba398]" name="close" is-config="true" duration-ms="474" started-at="2018-09-04T18:02:08Z" finished-at="2018-09-04T18:02:08Z">
+        </test-method> <!-- testDeploySolution -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.nxp.EdgeScale.testcase.Solution@5abca1e0]" name="close" is-config="true" duration-ms="164" started-at="2018-09-11T16:49:50Z" finished-at="2018-09-11T16:49:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.nxp.EdgeScale.testcase.Login -->
+      </class> <!-- com.nxp.EdgeScale.testcase.Solution -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

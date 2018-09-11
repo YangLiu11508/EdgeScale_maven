@@ -11,7 +11,6 @@
       <class name="com.nxp.EdgeScale.testcase.App"/>
       <class name="com.nxp.EdgeScale.testcase.CreateSolution"/>
       <class name="com.nxp.EdgeScale.testcase.Solution"/>
-      <class name="com.nxp.EdgeScale.testcase.CreateModel"/>
       <class name="com.nxp.EdgeScale.testcase.Model"/>
       <class name="com.nxp.EdgeScale.testcase.Vendor"/>
     </classes>

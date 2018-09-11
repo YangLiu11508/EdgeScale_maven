@@ -36,8 +36,14 @@ public class CreateSolutionPage extends BasePage{
 		return element(GetByLocator.getLocator("create_solution_version_input"));
 	}
 	
-	public WebElement getVersionInputList() {
-		return element(GetByLocator.getLocator("create_solution_version_input_list"));
+	public WebElement getVersionInputList(String version) {
+		ProUtil pro = new ProUtil(Common.ELEMENT);
+		String locator = pro.getPro("create_solution_version_input_list");
+		String locatorType = locator.split(">")[0];
+		String locatorValue = locator.split(">")[1];
+		String newValue = locatorValue.replace("version", version);
+		System.out.println("替换后  ==========" + newValue);
+		return element(GetByLocator.getLocator(locatorType, newValue));
 	}
 	
 	public WebElement getNextButton() {

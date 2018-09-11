@@ -1,32 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test name="Default test(failed)">
     <classes>
       <class name="com.nxp.EdgeScale.testcase.Solution">
         <methods>
           <include name="init"/>
           <include name="afterMethod"/>
-          <include name="testDeleteTag"/>
+          <include name="testDeploySolution"/>
           <include name="close"/>
         </methods>
       </class> <!-- com.nxp.EdgeScale.testcase.Solution -->
-      <class name="com.nxp.EdgeScale.testcase.Device">
-        <methods>
-          <include name="init"/>
-          <include name="close"/>
-          <include name="testDeleteTagFromDevice"/>
-          <include name="testInactiveDevice"/>
-          <include name="afterMethod"/>
-        </methods>
-      </class> <!-- com.nxp.EdgeScale.testcase.Device -->
-      <class name="com.nxp.EdgeScale.testcase.CreateSolution">
-        <methods>
-          <include name="close"/>
-          <include name="init"/>
-          <include name="testCreateSolution"/>
-        </methods>
-      </class> <!-- com.nxp.EdgeScale.testcase.CreateSolution -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

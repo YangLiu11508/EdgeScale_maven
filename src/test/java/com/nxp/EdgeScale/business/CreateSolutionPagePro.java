@@ -44,7 +44,7 @@ public class CreateSolutionPagePro {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		csph.clickVersionInputList();
+		csph.clickVersionInputList(version);
 		csph.clickNextButton();
 		try {
 			Thread.sleep(5000);

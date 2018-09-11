@@ -3,14 +3,14 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nxp.EdgeScale.testcase.Device">
+      <class name="com.nxp.EdgeScale.testcase.Solution">
         <methods>
           <include name="init"/>
-          <include name="close"/>
-          <include name="testInactiveDevice"/>
           <include name="afterMethod"/>
+          <include name="testDeploySolution"/>
+          <include name="close"/>
         </methods>
-      </class> <!-- com.nxp.EdgeScale.testcase.Device -->
+      </class> <!-- com.nxp.EdgeScale.testcase.Solution -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
